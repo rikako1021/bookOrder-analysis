@@ -1,0 +1,66 @@
+@charset "UTF-8";
+table {
+  text-align: center;
+  width: 50%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+ul, ol {
+  padding: 0;
+  position: relative;
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul li, ol li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
+
+table th {
+  text-align: center;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
+}
+table td {
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top: none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+}
+
+header nav {
+	position: absolute;
+	float: right;
+	right: 10px;
+	top: 0px;
+	line-height: 50px;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+h3 {
+  text-align: center;
+}
+.logo {
+  text-align: center;
+  background: #fff; /* 背景色を白色に */
+}
+
+
+
+

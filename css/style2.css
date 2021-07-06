@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+
+/*PC・タブレット・スマホ共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {min-height: 120%;}
+body {
+    min-height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	color: #666;	/*全体の文字色*/
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 14px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	-webkit-text-size-adjust: none;
+	background: linear-gradient(#000 100px, #fff 100px);	/*トップページ以外の背景設定。画面の上から150pxまでが#000で、そこからすぐ#fffの白色に切り替える内容。*/
+}
+
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+iframe {width: 100%;}
+.home{
+    position: absolute;
+	float: right;
+	right: 5px;
+	top: -7px;
+    font-size: 20px;
+    color: rgb(253, 247, 247);
+}
+
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: rgb(10, 10, 1);	/*リンクテキストの色*/
+	text-decoration: none;
+}
+a:hover {
+	color: rgb(252, 221, 221);	/*マウスオン時の文字色*/
+	text-decoration: underline;
+}
+
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 80%;			/*ブロックの幅を画面の80%にする設定。*/
+	max-width: 500px;	/*上のwidth指定の追加設定。幅1000pxを最大幅に設定し、それ以上広げない。*/
+	margin: 0 auto;		/*HP画面の左右中央に表示させる設定*/
+}
+
+/*ヘッダー（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------*/
+/*headerブロック*/
+header {
+	text-align: center;		/*headerの中身をセンタリングさせる設定*/
+	height: 100px;			/*headerの高さ*/
+	background: rgb(47, 119, 95);	/*headerの背景色*/
+}
+
+
+
+/*コンテンツ（見出しバーや文字などが入っているブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	background: #fff;	/*背景色*/
+	padding: 3%;		/*ボックス内の余白*/
+}
+/*コンテンツのh2タグの設定*/
+#contents h2 {
+	clear: both;
+	margin-bottom: 15px;
+	color: #fff;		/*文字色*/
+	padding: 5px 20px;	/*上下、左右への余白*/
+	background: #000;	/*背景色*/
+}
+/*コンテンツのh3タグの設定*/
+#contents h3 {
+	clear: both;
+	margin-bottom: 15px;
+	padding: 3px 20px;	/*上下、左右への余白*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+}
+/*コンテンツのp(段落)タグ設定*/
+#contents p {
+	padding: 0px 20px 14px;	/*上、左右、下への余白*/
+}
+#contents h2 + p,
+#contents h3 + p {
+	margin-top: -5px;
+}
+
+/*SERVICEページ
+---------------------------------------------------------------------------*/
+/*各ブロックごとの設定*/
+.list {
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;	/*下線の幅、線種、色*/
+	padding: 20px;	/*ボックス内の余白*/
+}
+/*h4見出しの設定*/
+h1 {
+	color: rgb(255, 255, 255);	/*文字色*/
+	font-size: 50px;	/*文字サイズ。少し大きくしています。*/
+}
+/*画像の設定*/
+.list img {
+	width: 30%;		/*画像幅*/
+	float: left;	/*画像を左に回り込み*/
+	margin-right: 0%	/*画像の右側に空けるスペース*/
+}
+.list p {
+	padding: 0 !important;
+}
+
+/*フッター(ページ最下部のcopyrightのパーツ)設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;	/*文字をセンタリング*/
+	padding: 20px 0px;	/*左から、上下、左右への余白*/
+}
+footer a {
+	text-decoration: none;
+	border: none;
+}
+footer .pr {
+	display: block;
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+/*ブロック全体の設定*/
+#new dl {
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+/*日付設定*/
+#new dt {
+	font-weight: bold;	/*太字にする設定。標準がいいならこの行削除。*/
+	float: left;
+	width: 8em;
+}
+/*記事設定*/
+#new dd {
+	padding-left: 8em;
+}
+
+/*テーブル
+---------------------------------------------------------------------------*/
+/*tテーブルブロック設定*/
+.ta1 {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.ta1, .ta1 td, .ta1 th {
+	border: 2px solid #000;	/*テーブルの枠線の幅、線種、色*/
+	padding: 10px;			/*テーブル内の余白*/
+	word-break: break-all;
+}
+/*テーブル１行目に入った見出し部分*/
+.ta1 th.tamidashi {
+	width: auto;
+	text-align: center;	/*左よせ*/
+	background: #000;	/*背景色*/
+	color: #fff;	/*文字色*/
+}
+/*テーブルの左側ボックス*/
+.ta1 th {
+	width: 30%;	/*幅*/
+	text-align: center;	/*センタリング*/
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {background: #e5e5e5;padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px;}
+.color1 {color: #000;}
+.pr {font-size: 10px;}
+
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 100%;	/*ブロックの幅を画面の100%にする設定。*/
+}
+
+
+}
+.h2 {
+    position: relative;
+	padding: 0 17%;
+	text-align: center;
+    color:#01579B;
+    font-size: 30px;
+}
+.h2:before,.h2:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	width: 15%;
+	height: 3px;
+	border-top: 3px double #03A9F4;
+}
+.h2:before {
+	left:0;
+}
+.h2:after {
+	right: 0;
+}
+.grovalNavigation{
+    font-size: 20px;
+    flex: 1;
+    color: #000;
+    padding: 100px 30px 14px;
+    position: relative;
+
+  }
+  .grovalNavigation:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+    background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+  }
+  .content{
+    color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+  line-height: 1.5;
+  padding: 1.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  }
+  .h2-1{
+    position: relative;
+    color: #000;
+    margin-bottom: 1em;
+    font-size: 30px;
+    text-align: center;
+  }
+  .h2-1:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 2px;
+  }
+  .p{
+ color: #000;
+ font-size: 15px;
+ text-align: center;
+  }
+  .botan{
+    font-size: 15px;
+    text-align: center;
+    padding: 200px 30px 14px;
+     }
+ .return{
+	font-size: 16px;
+	 padding: 0px 15px 0px;
+	 
+}
